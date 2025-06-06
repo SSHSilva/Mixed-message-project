@@ -8,4 +8,9 @@ function randomMessage(array) {
 
 }
 
-console.log(randomMessage(dailyMessage));
+const elementButton = document.querySelector('.js-message');
+const dailyQuote = document.querySelector('.js-quote');
+
+elementButton.addEventListener('click', () => {
+  dailyQuote.innerHTML = randomMessage(dailyMessage);
+});
